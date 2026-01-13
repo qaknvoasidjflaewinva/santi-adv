@@ -1,41 +1,46 @@
-import { Sparkles } from "lucide-react";
+import React from "react";
+import { Rocket, Play } from "lucide-react";
 import { motion } from "motion/react";
 
 export function XRFHeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-700 to-pink-800 text-white py-20 px-4">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-300 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <Sparkles className="w-5 h-5 text-yellow-300" />
-            <span className="text-sm">AI 赋能渲染设计行业</span>
+    <section className="pt-28 pb-20 md:pt-40 md:pb-32" id="home">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="md:w-1/2 mb-10 md:mb-0">
+            <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6">
+              小渲风-三体人：
+              <br />
+              <span className="text-[#165DFF]">精准赋能设计增长</span>
+            </h1>
+            <p className="text-lg text-gray-600 mb-8 max-w-lg">
+              拓客运营官、谈单沟通员、灵感搭配师——三大智能解决方案
+            </p>
           </div>
+          <div className="md:w-1/2 relative">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform  transition-transform hover:rotate-0 duration-500">
+              <video
+                className="w-full h-auto object-cover rounded-2xl"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                controls={false}
+              >
+                <source
+                  src="https://showlifecc.oss-cn-hangzhou.aliyuncs.com/assets/video/windWeb/santiren.mp4"
+                  type="video/mp4"
+                />
+                您的浏览器不支持视频播放。
+              </video>
+            </div>
+            {/* AI为人民服务图标区域 */}
 
-          <h1 className="text-5xl md:text-6xl mb-6 max-w-4xl mx-auto">
-            小渲风 AI 三体人
-          </h1>
-
-          <p className="text-xl md:text-2xl mb-4 text-purple-100">
-            劳模客服 + 远程设计师 + 超级统计员
-          </p>
-
-          <p className="text-lg md:text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
-            低门槛 · 高效率 · 轻量化
-            <br />
-            助力小渲风用户降本增效，实现"移动办公 + 智能服务"双升级
-          </p>
-        </motion.div>
+            <div className="absolute top-10 -right-5 w-64 h-64 bg-[#165DFF]/10 rounded-full filter blur-3xl -z-10"></div>
+            <div className="absolute -bottom-5 -left-10 w-48 h-48 bg-[#36CBCB]/10 rounded-full filter blur-3xl -z-10"></div>
+          </div>
+        </div>
       </div>
     </section>
   );

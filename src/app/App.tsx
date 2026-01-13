@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigation } from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
 import { PainPoints } from "./components/PainPoints";
@@ -20,7 +20,7 @@ import { XRFHeroSection } from "./components/XRFHeroSection";
 import { XRFPainPoints } from "./components/XRFPainPoints";
 import { XRFAITools } from "./components/XRFAITools";
 import { XRFPricingSection } from "./components/XRFPricingSection";
-import { XRFBusinessPlan } from "./components/XRFBusinessPlan";
+import { XRFContactSection } from "./components/XRFContactSection";
 import { XRFMobilePage } from "./components/XRFMobilePage";
 import { Smartphone } from "lucide-react";
 
@@ -52,12 +52,11 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen ${isMobilePage ? "bg-gray-900" : "bg-gradient-to-b from-slate-50 to-white"}`}
+      className={`min-h-screen ${
+        isMobilePage ? "bg-gray-900" : "bg-gradient-to-b from-slate-50 to-white"
+      }`}
     >
-      <Navigation
-        currentPage={currentPage}
-        onNavigate={setCurrentPage}
-      />
+      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
 
       {currentPage === "home" ? (
         <>
@@ -78,9 +77,7 @@ export default function App() {
           <CTASection />
         </>
       ) : currentPage === "cad" ? (
-        <CADPage
-          onShowMobile={() => setCurrentPage("cad-mobile")}
-        />
+        <CADPage onShowMobile={() => setCurrentPage("cad-mobile")} />
       ) : currentPage === "window" ? (
         <>
           {/* 手机图标按钮 - 固定在右上角 */}
@@ -114,8 +111,7 @@ export default function App() {
           <XRFPainPoints />
           <XRFAITools />
           <XRFPricingSection />
-          <XRFBusinessPlan />
-          <CTASection />
+          <XRFContactSection />
         </>
       ) : isMobilePage ? (
         /* 手机模拟器容器 */

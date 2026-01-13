@@ -1,7 +1,18 @@
-import { motion } from 'motion/react';
-import { Smartphone, Zap, Wand2, FileDown, Gift, Users, TrendingUp, Star, Calendar, Rocket } from 'lucide-react';
-import { Card } from './ui/card';
-import { Badge } from './ui/badge';
+import { motion } from "motion/react";
+import {
+  Smartphone,
+  Zap,
+  Wand2,
+  FileDown,
+  Gift,
+  Users,
+  TrendingUp,
+  Star,
+  Calendar,
+  Rocket,
+} from "lucide-react";
+import { Card } from "./ui/card";
+import { Badge } from "./ui/badge";
 
 interface CADPageProps {
   onShowMobile?: () => void;
@@ -40,22 +51,24 @@ export function CADPage({ onShowMobile }: CADPageProps) {
               <span className="text-sm">🎉 元旦限时活动 · 仅此一天！</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl mb-6">
-              CAD-三体人
-            </h1>
-            
+            <h1 className="text-5xl md:text-6xl mb-6">CAD-三体人</h1>
+
             <p className="text-xl md:text-2xl mb-4 text-orange-100">
               手机说话就能画CAD，支持自动挡+手动挡
             </p>
-            
+
             <p className="text-lg md:text-xl mb-8 text-orange-100 max-w-3xl mx-auto">
               语音描述 → AI自动画图 → 手动精修 → 一键导入柜柜/小渲风/门窗软件
             </p>
 
             <div className="bg-yellow-400 text-gray-900 inline-block px-8 py-4 rounded-2xl mb-8">
               <div className="text-sm mb-1">元旦特惠价</div>
-              <div className="text-5xl">¥500<span className="text-2xl">/年</span></div>
-              <div className="text-xl mt-2 text-red-700 font-semibold">涨价不涨老客户</div>
+              <div className="text-5xl">
+                ¥500<span className="text-2xl">/年</span>
+              </div>
+              <div className="text-xl mt-2 text-red-700 font-semibold">
+                涨价不涨老客户
+              </div>
             </div>
 
             {/* 核心卖点 */}
@@ -87,7 +100,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
             className="text-center mb-12"
           >
             <h2 className="text-4xl mb-4 text-gray-900">CAD三体人能做什么？</h2>
-            <p className="text-xl text-gray-600">从此告别电脑画图，手机就是制图工具</p>
+            <p className="text-xl text-gray-600">
+              从此告别电脑画图，手机就是制图工具
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -106,19 +121,28 @@ export function CADPage({ onShowMobile }: CADPageProps) {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">✓</span>
-                    <span><strong>语音描述：</strong>"画一个2米宽1.5米高的衣柜，左边三个抽屉"</span>
+                    <span>
+                      <strong>语音描述：</strong>
+                      "画一个2米宽1.5米高的衣柜，左边三个抽屉"
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">✓</span>
-                    <span><strong>AI自动画图：</strong>三体人立即生成CAD图纸</span>
+                    <span>
+                      <strong>AI自动画图：</strong>三体人立即生成CAD图纸
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">✓</span>
-                    <span><strong>智能修改：</strong>"把抽屉改成4个""高度改成1.8米"</span>
+                    <span>
+                      <strong>智能修改：</strong>"把抽屉改成4个""高度改成1.8米"
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">✓</span>
-                    <span><strong>省时省力：</strong>5分钟画完原本需要1小时的图</span>
+                    <span>
+                      <strong>省时省力：</strong>5分钟画完原本需要1小时的图
+                    </span>
                   </li>
                 </ul>
               </Card>
@@ -139,19 +163,28 @@ export function CADPage({ onShowMobile }: CADPageProps) {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 mt-1">✓</span>
-                    <span><strong>点击编辑：</strong>AI画完后，点击任意部分进入编辑</span>
+                    <span>
+                      <strong>点击编辑：</strong>AI画完后，点击任意部分进入编辑
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 mt-1">✓</span>
-                    <span><strong>精细调整：</strong>拖动、缩放、旋转，像修图一样简单</span>
+                    <span>
+                      <strong>精细调整：</strong>
+                      拖动、缩放、旋转，像修图一样简单
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 mt-1">✓</span>
-                    <span><strong>专业控制：</strong>尺寸、角度、位置完全由你掌控</span>
+                    <span>
+                      <strong>专业控制：</strong>尺寸、角度、位置完全由你掌控
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 mt-1">✓</span>
-                    <span><strong>完美结合：</strong>AI快速起稿，手动精雕细琢</span>
+                    <span>
+                      <strong>完美结合：</strong>AI快速起稿，手动精雕细琢
+                    </span>
                   </li>
                 </ul>
               </Card>
@@ -181,7 +214,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
                 <div className="text-center p-4 bg-white rounded-lg">
                   <div className="text-3xl mb-2">🔗</div>
                   <div className="text-gray-900 mb-1">柜柜软件</div>
-                  <div className="text-sm text-gray-600">导入后直接下单生产</div>
+                  <div className="text-sm text-gray-600">
+                    导入后直接下单生产
+                  </div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg">
                   <div className="text-3xl mb-2">🪟</div>
@@ -191,7 +226,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
                 <div className="text-center p-4 bg-white rounded-lg">
                   <div className="text-3xl mb-2">🎨</div>
                   <div className="text-gray-900 mb-1">小渲风等</div>
-                  <div className="text-sm text-gray-600">渲染效果图无缝衔接</div>
+                  <div className="text-sm text-gray-600">
+                    渲染效果图无缝衔接
+                  </div>
                 </div>
               </div>
             </Card>
@@ -213,7 +250,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
               <span>🔥 介绍一个客户，送3年免费使用！</span>
             </div>
             <h2 className="text-5xl mb-4 text-white">老客户推荐购买主产品</h2>
-            <p className="text-2xl text-pink-100">成交即送，新老客户都免费3年！</p>
+            <p className="text-2xl text-pink-100">
+              成交即送，新老客户都免费3年！
+            </p>
           </motion.div>
 
           {/* 拉新流程 */}
@@ -272,7 +311,10 @@ export function CADPage({ onShowMobile }: CADPageProps) {
                 </div>
                 <h3 className="text-2xl mb-3">双方都免费</h3>
                 <p className="leading-relaxed">
-                  新客户和您都<strong className="text-yellow-300 text-xl">免费获得CAD-AI三体人3年使用权</strong>
+                  新客户和您都
+                  <strong className="text-yellow-300 text-xl">
+                    免费获得CAD-AI三体人3年使用权
+                  </strong>
                 </p>
                 <div className="mt-4 flex items-center justify-center gap-2">
                   <Gift className="w-5 h-5" />
@@ -289,7 +331,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
             viewport={{ once: true }}
             className="bg-white rounded-2xl p-8 mb-8"
           >
-            <h3 className="text-3xl text-center mb-6 text-gray-900">💰 拉新收益一目了然</h3>
+            <h3 className="text-3xl text-center mb-6 text-gray-900">
+              💰 拉新收益一目了然
+            </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl">
                 <div className="text-5xl mb-2">1人</div>
@@ -319,7 +363,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-8 text-center"
           >
-            <h3 className="text-3xl mb-4 text-gray-900">👥 您的同行朋友都需要这个工具！</h3>
+            <h3 className="text-3xl mb-4 text-gray-900">
+              👥 您的同行朋友都需要这个工具！
+            </h3>
             <p className="text-xl text-gray-800 mb-6">
               介绍给他们，他们省钱省时间，您还能免费用3年！
             </p>
@@ -352,24 +398,30 @@ export function CADPage({ onShowMobile }: CADPageProps) {
           >
             <Calendar className="w-16 h-16 mx-auto mb-6 text-yellow-300" />
             <h2 className="text-4xl mb-6">元旦限时活动</h2>
-            
+
             <Card className="bg-white/10 backdrop-blur-sm border-2 border-yellow-400 p-8 mb-8">
               <div className="text-center mb-6">
                 <Badge className="bg-yellow-400 text-gray-900 text-lg px-4 py-2 mb-4">
                   限时特惠
                 </Badge>
-                <div className="text-6xl mb-2">¥500<span className="text-3xl">/年</span></div>
+                <div className="text-6xl mb-2">
+                  ¥500<span className="text-3xl">/年</span>
+                </div>
                 <div className="text-xl text-blue-200">元旦活动期间专享价</div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="text-2xl mb-2">🎁 单独购买</div>
-                  <div className="text-lg text-blue-200">500元/年，立即使用</div>
+                  <div className="text-lg text-blue-200">
+                    500元/年，立即使用
+                  </div>
                 </div>
                 <div className="bg-yellow-400/20 rounded-lg p-4 border-2 border-yellow-400">
                   <div className="text-2xl mb-2">🔥 介绍客户</div>
-                  <div className="text-lg text-yellow-300">免费送3年（价值1500元）</div>
+                  <div className="text-lg text-yellow-300">
+                    免费送3年（价值1500元）
+                  </div>
                 </div>
               </div>
             </Card>
@@ -377,7 +429,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
             <div className="bg-red-500 rounded-xl p-6 mb-8">
               <div className="text-2xl mb-2">⏰ 活动截止时间</div>
               <div className="text-4xl">元旦活动期间</div>
-              <div className="text-lg text-red-100 mt-2">错过再等一年，名额有限</div>
+              <div className="text-lg text-red-100 mt-2">
+                错过再等一年，名额有限
+              </div>
             </div>
 
             <div className="text-center">
@@ -406,29 +460,29 @@ export function CADPage({ onShowMobile }: CADPageProps) {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                icon: '🏠',
-                title: '客户现场量房',
-                desc: '边量边画，当场出图给客户看',
-                benefit: '提升专业形象，签单率更高'
+                icon: "🏠",
+                title: "客户现场量房",
+                desc: "边量边画，当场出图给客户看",
+                benefit: "提升专业形象，签单率更高",
               },
               {
-                icon: '🚗',
-                title: '外出办事途中',
-                desc: '车上、路上，利用碎片时间画图',
-                benefit: '时间利用率提升200%'
+                icon: "🚗",
+                title: "外出办事途中",
+                desc: "车上、路上，利用碎片时间画图",
+                benefit: "时间利用率提升200%",
               },
               {
-                icon: '💼',
-                title: '临时修改方案',
-                desc: '客户临时要改图，手机立即搞定',
-                benefit: '响应速度快，客户满意度高'
+                icon: "💼",
+                title: "临时修改方案",
+                desc: "客户临时要改图，手机立即搞定",
+                benefit: "响应速度快，客户满意度高",
               },
               {
-                icon: '🌙',
-                title: '晚上在家加班',
-                desc: '不用开电脑，躺着都能画CAD',
-                benefit: '工作活两不误'
-              }
+                icon: "🌙",
+                title: "晚上在家加班",
+                desc: "不用开电脑，躺着都能画CAD",
+                benefit: "工作活两不误",
+              },
             ].map((scenario, index) => (
               <motion.div
                 key={index}
@@ -439,7 +493,9 @@ export function CADPage({ onShowMobile }: CADPageProps) {
               >
                 <Card className="p-6 h-full hover:shadow-lg transition-shadow">
                   <div className="text-5xl mb-4">{scenario.icon}</div>
-                  <h3 className="text-2xl mb-2 text-gray-900">{scenario.title}</h3>
+                  <h3 className="text-2xl mb-2 text-gray-900">
+                    {scenario.title}
+                  </h3>
                   <p className="text-gray-700 mb-3">{scenario.desc}</p>
                   <div className="flex items-center gap-2 text-green-600">
                     <Star className="w-5 h-5" />
@@ -460,31 +516,22 @@ export function CADPage({ onShowMobile }: CADPageProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl mb-6">立即开始使用CAD-AI三体人</h2>
+            <h2 className="text-4xl md:text-5xl mb-6">
+              立即开始使用CAD-AI三体人
+            </h2>
             <p className="text-xl mb-8 text-blue-100">
               元旦活动限时优惠 | 介绍客户即送3年免费使用
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:sales@santi.ren"
-                className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl text-xl hover:bg-yellow-300 transition-colors inline-flex items-center gap-2"
-              >
+              <a className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl text-xl hover:bg-yellow-300 transition-colors inline-flex items-center gap-2">
                 <span>立即购买 ¥500/年</span>
                 <Rocket className="w-6 h-6" />
               </a>
-              <a
-                href="mailto:sales@santi.ren?subject=我要推荐客户获取免费使用"
-                className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl text-xl hover:bg-white/30 transition-colors inline-flex items-center gap-2"
-              >
+              <a className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl text-xl hover:bg-white/30 transition-colors inline-flex items-center gap-2">
                 <span>我要推荐客户</span>
                 <Gift className="w-6 h-6" />
               </a>
-            </div>
-
-            <div className="mt-8 text-blue-100">
-              <p>联系邮箱: sales@santi.ren</p>
-              <p className="mt-2 text-sm">客服会在24小时内回复您</p>
             </div>
           </motion.div>
         </div>

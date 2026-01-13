@@ -135,25 +135,6 @@ export function AITools() {
                       </li>
                     ))}
                   </ul>
-
-                  {/* Price Tag */}
-                  <div
-                    className={`mt-6 pt-4 border-t border-gray-200 text-center`}
-                  >
-                    <div className="text-sm text-gray-600 mb-1">
-                      限时优惠价
-                    </div>
-                    <div className="flex items-baseline justify-center gap-2">
-                      <span
-                        className={`text-3xl bg-gradient-to-r ${person.color} bg-clip-text text-transparent`}
-                      >
-                        ¥200
-                      </span>
-                      <span className="text-gray-400 line-through text-sm">
-                        ¥400
-                      </span>
-                    </div>
-                  </div>
                 </div>
               </Card>
             </motion.div>

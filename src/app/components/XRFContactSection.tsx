@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Calendar, Gift, Clock, Rocket, ShoppingCart } from "lucide-react";
-import xxfHxgImage from "@/assets/images/xxf_hxg.png";
+import xxfHxgImage from "@/assets/images/xxfhxg.JPG";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
+import { Button } from "./ui/button";
 
 export function XRFContactSection() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   function handleBuy() {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    setIsDialogOpen(true);
+  }
+
+  function handleConfirm() {
+    //正式服
+    window.open("https://showlife.cc?scrollTo=6500", "_blank");
+    //测试服
+    //window.open("https://test-wind.eggrj.com?scrollTo=6500", "_blank");
+    setIsDialogOpen(false);
   }
 
   const benefits = [
@@ -120,6 +136,24 @@ export function XRFContactSection() {
           ))}
         </div>
       </div>
+
+      {/* 确认跳转弹窗 */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>跳转提示</DialogTitle>
+            <DialogDescription>
+              将要跳转小渲风官网购买，确定跳转？
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
+              取消
+            </Button>
+            <Button onClick={handleConfirm}>确定跳转</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

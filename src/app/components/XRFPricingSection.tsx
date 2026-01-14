@@ -1,5 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
+import { Button } from "./ui/button";
 
 const pricingPlans = [
   {
@@ -30,11 +39,18 @@ const pricingPlans = [
 ];
 
 export function XRFPricingSection() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   function handleBuy() {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    setIsDialogOpen(true);
+  }
+
+  function handleConfirm() {
+    //正式服
+    window.open("https://showlife.cc?scrollTo=6500", "_blank");
+    //测试服
+    //window.open("https://test-wind.eggrj.com?scrollTo=6500", "_blank");
+    setIsDialogOpen(false);
   }
 
   return (
@@ -94,7 +110,13 @@ export function XRFPricingSection() {
                         key={idx}
                         className="flex items-center text-sm text-[#333] mb-3 leading-relaxed"
                       >
-                        <span className="inline-flex items-center justify-center w-5 h-5 bg-[#48bb78] text-white rounded-full text-xs font-bold mr-3 flex-shrink-0">
+                        <span
+                          className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold mr-3 flex-shrink-0 ${
+                            index === 0
+                              ? "bg-gray-400 text-white"
+                              : "bg-[#48bb78] text-white"
+                          }`}
+                        >
                           ✓
                         </span>
                         <span>{feature}</span>
@@ -144,6 +166,24 @@ export function XRFPricingSection() {
           </button>
         </div>
       </div>
+
+      {/* 确认跳转弹窗 */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>跳转提示</DialogTitle>
+            <DialogDescription>
+              将要跳转小渲风官网购买，确定跳转？
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
+              取消
+            </Button>
+            <Button onClick={handleConfirm}>确定跳转</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

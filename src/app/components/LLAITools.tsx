@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Card } from "./ui/card";
-// 导入图片
-import robotPowerImage from "../../assets/images/03.png";
+// 图片网络地址
+const robotPowerImage = "https://sanjz-cdn.santi.ren/santi/images/03.png";
 
 export function LLAITools() {
   const aiFeatures = [

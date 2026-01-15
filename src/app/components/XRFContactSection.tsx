@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Calendar, Gift, Clock, Rocket, ShoppingCart } from "lucide-react";
-import xxfHxgImage from "@/assets/images/xxfhxg.JPG";
 import {
   Dialog,
   DialogContent,
@@ -11,6 +10,9 @@ import {
   DialogTitle,
 } from "./ui/dialog";
 import { Button } from "./ui/button";
+
+// 图片网络地址
+const xxfHxgImage = "https://sanjz-cdn.santi.ren/santi/images/xxfhxg.JPG";
 
 export function XRFContactSection() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);

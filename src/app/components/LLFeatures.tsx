@@ -4,9 +4,9 @@ import { CheckCircle2, Clock, TrendingUp, Zap, BarChart3, MessageSquare } from "
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 
-// 导入视频
-import sanTiDifferenceVideo from "../../assets/videos/三体机器人区别(1).mp4";
-import autoWechatVideo from "../../assets/videos/自动发微信消息.mp4";
+// 视频网络地址
+const sanTiDifferenceVideo = "https://sanjz-cdn.santi.ren/santi/videos/三体机器人区别(1).mp4";
+const autoWechatVideo = "https://sanjz-cdn.santi.ren/santi/videos/自动发微信消息.mp4";
 
 const coreAdvantages = [
   "工厂效率提高",

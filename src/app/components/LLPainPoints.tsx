@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "motion/react";
 import { Card } from "./ui/card";
 import { UserPlus, DollarSign, Clock, UserMinus } from "lucide-react";
-// 导入图片
-import painPointImage from "../../assets/images/02.jpeg";
+// 图片网络地址
+const painPointImage = "https://sanjz-cdn.santi.ren/santi/images/02.jpeg";
 
 export function LLPainPoints() {
   const painPoints = [

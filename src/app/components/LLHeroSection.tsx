@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
-// 导入视频
-import sanTiFunctionVideo from "../../assets/videos/三体功能介绍.mp4";
+// 视频网络地址
+const sanTiFunctionVideo = "https://sanjz-cdn.santi.ren/santi/videos/三体功能介绍.mp4";
 
 export function LLHeroSection() {
   return (

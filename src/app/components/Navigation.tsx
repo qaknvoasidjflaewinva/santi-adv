@@ -3,8 +3,8 @@ import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface NavigationProps {
-  currentPage: 'home' | 'cad' | 'home-mobile' | 'cad-mobile' | 'cad-simulator' | 'window' | 'window-mobile' | 'xrf' | 'xrf-mobile';
-  onNavigate: (page: 'home' | 'cad' | 'home-mobile' | 'cad-mobile' | 'cad-simulator' | 'window' | 'window-mobile' | 'xrf' | 'xrf-mobile') => void;
+  currentPage: 'home' | 'cad' | 'home-mobile' | 'cad-mobile' | 'cad-simulator' | 'window' | 'window-mobile' | 'xrf' | 'xrf-mobile' | 'll' | 'll-mobile';
+  onNavigate: (page: 'home' | 'cad' | 'home-mobile' | 'cad-mobile' | 'cad-simulator' | 'window' | 'window-mobile' | 'xrf' | 'xrf-mobile' | 'll' | 'll-mobile') => void;
 }
 
 // 离卦符号 SVG 组件
@@ -31,7 +31,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     { id: 'window' as const, label: '门窗行业 三体人' },
     { id: 'home' as const, label: '家具行业 三体人' },
     { id: 'cad' as const, label: '装修行业 三体人', badge: '新品' },
-    { id: 'xrf' as const, label: '小渲风 三体人' }
+    { id: 'xrf' as const, label: '小渲风 三体人' },
+    { id: 'll' as const, label: '老板良 三体人' }
   ];
 
   // 判断当前是否在home或cad页面（非mobile版本）
@@ -39,6 +40,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const isCadPage = currentPage === 'cad' || currentPage === 'cad-mobile' || currentPage === 'cad-simulator';
   const isWindowPage = currentPage === 'window' || currentPage === 'window-mobile';
   const isXRFPage = currentPage === 'xrf' || currentPage === 'xrf-mobile';
+  const isLLPage = currentPage === 'll' || currentPage === 'll-mobile';
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -62,7 +64,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
                 className={`relative px-4 py-2 rounded-lg transition-all ${
-                  (item.id === 'home' && isHomePage) || (item.id === 'cad' && isCadPage) || (item.id === 'window' && isWindowPage) || (item.id === 'xrf' && isXRFPage)
+                  (item.id === 'home' && isHomePage) || (item.id === 'cad' && isCadPage) || (item.id === 'window' && isWindowPage) || (item.id === 'xrf' && isXRFPage) || (item.id === 'll' && isLLPage)
                     ? 'text-blue-600'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
@@ -73,7 +75,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                     {item.badge}
                   </span>
                 )}
-                {((item.id === 'home' && isHomePage) || (item.id === 'cad' && isCadPage) || (item.id === 'window' && isWindowPage) || (item.id === 'xrf' && isXRFPage)) && (
+                {((item.id === 'home' && isHomePage) || (item.id === 'cad' && isCadPage) || (item.id === 'window' && isWindowPage) || (item.id === 'xrf' && isXRFPage) || (item.id === 'll' && isLLPage)) && (
                   <motion.div
                     layoutId="activeTab"
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
@@ -107,7 +109,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                   setIsMenuOpen(false);
                 }}
                 className={`w-full text-left px-4 py-3 rounded-lg transition-all flex items-center justify-between ${
-                  (item.id === 'home' && isHomePage) || (item.id === 'cad' && isCadPage) || (item.id === 'window' && isWindowPage) || (item.id === 'xrf' && isXRFPage)
+                  (item.id === 'home' && isHomePage) || (item.id === 'cad' && isCadPage) || (item.id === 'window' && isWindowPage) || (item.id === 'xrf' && isXRFPage) || (item.id === 'll' && isLLPage)
                     ? 'bg-blue-50 text-blue-600'
                     : 'text-gray-600 hover:bg-gray-50'
                 }`}

@@ -22,6 +22,12 @@ import { XRFAITools } from "./components/XRFAITools";
 import { XRFPricingSection } from "./components/XRFPricingSection";
 import { XRFContactSection } from "./components/XRFContactSection";
 import { XRFMobilePage } from "./components/XRFMobilePage";
+import { LLHeroSection } from "./components/LLHeroSection";
+import { LLPainPoints } from "./components/LLPainPoints";
+import { LLAITools } from "./components/LLAITools";
+import { LLApplications } from "./components/LLApplications";
+import { LLCoreConcept } from "./components/LLCoreConcept";
+import { LLFeatures } from "./components/LLFeatures";
 import { Smartphone } from "lucide-react";
 
 export default function App() {
@@ -35,6 +41,8 @@ export default function App() {
     | "window-mobile"
     | "xrf"
     | "xrf-mobile"
+    | "ll"
+    | "ll-mobile"
   >("home");
 
   // 更新页面标题
@@ -48,7 +56,8 @@ export default function App() {
     currentPage === "cad-mobile" ||
     currentPage === "cad-simulator" ||
     currentPage === "window-mobile" ||
-    currentPage === "xrf-mobile";
+    currentPage === "xrf-mobile" ||
+    currentPage === "ll-mobile";
 
   return (
     <div
@@ -113,6 +122,24 @@ export default function App() {
           <XRFPricingSection />
           <XRFContactSection />
         </>
+      ) : currentPage === "ll" ? (
+        <>
+          {/* 手机图标按钮 - 固定在右上角 */}
+          <button
+            onClick={() => setCurrentPage("ll-mobile")}
+            className="fixed top-20 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            title="手机展示页"
+          >
+            <Smartphone className="w-6 h-6" />
+          </button>
+
+          <LLHeroSection />
+          <LLPainPoints />
+          <LLAITools />
+          <LLFeatures />
+          <LLApplications />
+          <LLCoreConcept />
+        </>
       ) : isMobilePage ? (
         /* 手机模拟器容器 */
         <div className="py-8 px-4 flex justify-center items-start min-h-screen">
@@ -134,6 +161,14 @@ export default function App() {
                     <WindowMobilePage />
                   ) : currentPage === "xrf-mobile" ? (
                     <XRFMobilePage />
+                  ) : currentPage === "ll-mobile" ? (
+                    <div className="p-4 bg-white min-h-screen">
+                      <h1 className="text-2xl font-bold mb-4 text-gray-800">老板良三体人</h1>
+                      <p className="text-gray-600 mb-6">移动端页面开发中...</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <p className="text-blue-600">请使用桌面端访问完整功能</p>
+                      </div>
+                    </div>
                   ) : (
                     <CADPage />
                   )}

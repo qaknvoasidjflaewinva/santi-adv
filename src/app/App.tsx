@@ -28,6 +28,10 @@ import { LLAITools } from "./components/LLAITools";
 import { LLApplications } from "./components/LLApplications";
 import { LLCoreConcept } from "./components/LLCoreConcept";
 import { LLFeatures } from "./components/LLFeatures";
+import { SFEHeroSection } from "./components/SFEHeroSection";
+import { SFEPainPoints } from "./components/SFEPainPoints";
+import { SFEAITools } from "./components/SFEAITools";
+import { SFEPricingSection } from "./components/SFEPricingSection";
 import { Smartphone } from "lucide-react";
 
 export default function App() {
@@ -43,6 +47,8 @@ export default function App() {
     | "xrf-mobile"
     | "ll"
     | "ll-mobile"
+    | "sfe"
+    | "sfe-mobile"
   >("home");
 
   // 更新页面标题
@@ -57,7 +63,8 @@ export default function App() {
     currentPage === "cad-simulator" ||
     currentPage === "window-mobile" ||
     currentPage === "xrf-mobile" ||
-    currentPage === "ll-mobile";
+    currentPage === "ll-mobile" ||
+    currentPage === "sfe-mobile";
 
   return (
     <div
@@ -140,6 +147,24 @@ export default function App() {
           <LLApplications />
           <LLCoreConcept />
         </>
+      ) : currentPage === "sfe" ? (
+        <>
+          {/* 手机图标按钮 - 固定在右上角 */}
+          <button
+            onClick={() => setCurrentPage("sfe-mobile")}
+            className="fixed top-20 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+            title="手机展示页"
+          >
+            <Smartphone className="w-6 h-6" />
+          </button>
+
+          <SFEHeroSection />
+          <SFEPainPoints />
+          <SFEAITools />
+          <SFEPricingSection />
+          <BusinessPlan />
+          <CTASection />
+        </>
       ) : isMobilePage ? (
         /* 手机模拟器容器 */
         <div className="py-8 px-4 flex justify-center items-start min-h-screen">
@@ -163,10 +188,26 @@ export default function App() {
                     <XRFMobilePage />
                   ) : currentPage === "ll-mobile" ? (
                     <div className="p-4 bg-white min-h-screen">
-                      <h1 className="text-2xl font-bold mb-4 text-gray-800">老板良三体人</h1>
+                      <h1 className="text-2xl font-bold mb-4 text-gray-800">
+                        老板良三体人
+                      </h1>
                       <p className="text-gray-600 mb-6">移动端页面开发中...</p>
                       <div className="bg-blue-50 rounded-lg p-4">
-                        <p className="text-blue-600">请使用桌面端访问完整功能</p>
+                        <p className="text-blue-600">
+                          请使用桌面端访问完整功能
+                        </p>
+                      </div>
+                    </div>
+                  ) : currentPage === "sfe-mobile" ? (
+                    <div className="p-4 bg-white min-h-screen">
+                      <h1 className="text-2xl font-bold mb-4 text-gray-800">
+                        营销获客三体人
+                      </h1>
+                      <p className="text-gray-600 mb-6">移动端页面开发中...</p>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <p className="text-blue-600">
+                          请使用桌面端访问完整功能
+                        </p>
                       </div>
                     </div>
                   ) : (

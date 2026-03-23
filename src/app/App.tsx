@@ -20,6 +20,7 @@ import { XRFHeroSection } from "./components/XRFHeroSection";
 import { XRFPainPoints } from "./components/XRFPainPoints";
 import { XRFAITools } from "./components/XRFAITools";
 import { XRFPricingSection } from "./components/XRFPricingSection";
+import { XRFNegotiatorSection } from "./components/XRFNegotiatorSection";
 import { XRFContactSection } from "./components/XRFContactSection";
 import { XRFMobilePage } from "./components/XRFMobilePage";
 import { LLHeroSection } from "./components/LLHeroSection";
@@ -127,7 +128,8 @@ export default function App() {
           <XRFPainPoints />
           <XRFAITools />
           <XRFPricingSection />
-          <XRFContactSection />
+          <XRFNegotiatorSection />
+          {/* <XRFContactSection /> */}
         </>
       ) : currentPage === "ll" ? (
         <>

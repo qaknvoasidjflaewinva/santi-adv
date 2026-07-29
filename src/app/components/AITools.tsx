@@ -115,9 +115,16 @@ export function AITools() {
                     <h3 className="text-2xl mb-2 text-gray-900">
                       {person.name}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 mb-3">
                       {person.subtitle}
                     </p>
+                    <div className="flex items-baseline">
+                      <span className="text-xl text-gray-800 mr-1">¥</span>
+                      <span className="text-4xl font-bold text-gray-800">
+                        500
+                      </span>
+                      <span className="text-lg text-gray-500 ml-1">/个/年</span>
+                    </div>
                   </div>
 
                   <ul className="space-y-3 flex-1">

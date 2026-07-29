@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { CheckCircle2, Clock, TrendingUp, Zap, BarChart3, MessageSquare } from "lucide-react";
+import { CheckCircle2, BarChart3, MessageSquare } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 
@@ -34,12 +34,7 @@ const tools = [
 ];
 
 const pricingInfo = {
-  tiers: [
-    { price: "300元/年/个", highlight: false },
-    { price: "500元/年/2个", highlight: true }
-  ],
-  highlightText: "2026年2月15日前购买享",
-  period: "活动时间：2025年12月25日-2026年3月25日"
+  price: "500元/个/年",
 };
 
 export function LLFeatures() {
@@ -214,56 +209,25 @@ export function LLFeatures() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl mb-4 text-gray-900">
-              限时福利
+              产品价格
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              把握机会，立即拥有老板良三体人
+              立即拥有老板良三体人
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {pricingInfo.tiers.map((tier, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.2
-                }}
-              >
-                <Card className={`p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden ${tier.highlight ? 'border-2 border-green-500 shadow-lg' : ''}`}>
-                  <div className="mb-6 relative">
-                    {/* 为了保持高度一致，添加占位元素 */}
-                    {!tier.highlight && (
-                      <div className="h-10 mb-4"></div>
-                    )}
-                    {/* 仅为500元方案显示优惠标识 - 非旋转样式 */}
-                    {tier.highlight && (
-                      <div className="inline-block bg-green-500 text-white px-6 py-2 text-sm font-bold rounded-full mb-4">
-                        {pricingInfo.highlightText}
-                      </div>
-                    )}
-                    <h3 className="text-4xl font-bold text-gray-900 mb-2">{tier.price}</h3>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="max-w-md mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Card className="p-8 text-center hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-4xl font-bold text-gray-900">{pricingInfo.price}</h3>
+              </Card>
+            </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-center mt-12"
-          >
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-              <Clock className="w-6 h-6" />
-              <span className="text-xl font-bold">{pricingInfo.period}</span>
-            </div>
-          </motion.div>
         </div>
       </section>
     </>

@@ -27,9 +27,14 @@ export function SFEPainPoints() {
           <h3 className="text-4xl mb-4 text-gray-900">
             营销获客三体人能做什么?
           </h3>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-6">
             从自动生成精美图文内容到模拟真人发布，实现真正的全流程营销自动化。
           </p>
+          <div className="flex items-baseline justify-center">
+            <span className="text-xl text-gray-800 mr-1">¥</span>
+            <span className="text-4xl font-bold text-gray-800">500</span>
+            <span className="text-lg text-gray-500 ml-1">/个/年</span>
+          </div>
         </motion.div>
 
         {/* 功能模块 */}

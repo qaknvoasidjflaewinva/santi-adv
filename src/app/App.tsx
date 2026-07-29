@@ -3,7 +3,6 @@ import { Navigation } from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
 import { PainPoints } from "./components/PainPoints";
 import { AITools } from "./components/AITools";
-import { PricingSection } from "./components/PricingSection";
 import { BusinessPlan } from "./components/BusinessPlan";
 import { CTASection } from "./components/CTASection";
 import { CADPage } from "./components/CADPage";
@@ -12,7 +11,6 @@ import { CADMobilePage } from "./components/CADMobilePage";
 import { WindowHeroSection } from "./components/WindowHeroSection";
 import { WindowPainPoints } from "./components/WindowPainPoints";
 import { WindowAITools } from "./components/WindowAITools";
-import { WindowPricingSection } from "./components/WindowPricingSection";
 import { WindowBusinessPlan } from "./components/WindowBusinessPlan";
 import { WindowCTASection } from "./components/WindowCTASection";
 import { WindowMobilePage } from "./components/WindowMobilePage";
@@ -32,7 +30,6 @@ import { LLFeatures } from "./components/LLFeatures";
 import { SFEHeroSection } from "./components/SFEHeroSection";
 import { SFEPainPoints } from "./components/SFEPainPoints";
 import { SFEAITools } from "./components/SFEAITools";
-import { SFEPricingSection } from "./components/SFEPricingSection";
 import { Smartphone } from "lucide-react";
 
 export default function App() {
@@ -89,7 +86,6 @@ export default function App() {
           <HeroSection />
           <PainPoints />
           <AITools />
-          <PricingSection />
           <BusinessPlan />
           <CTASection />
         </>
@@ -109,7 +105,6 @@ export default function App() {
           <WindowHeroSection />
           <WindowPainPoints />
           <WindowAITools />
-          <WindowPricingSection />
           <WindowBusinessPlan />
           <WindowCTASection />
         </>
@@ -163,7 +158,6 @@ export default function App() {
           <SFEHeroSection />
           <SFEPainPoints />
           <SFEAITools />
-          <SFEPricingSection />
           <BusinessPlan />
           <CTASection />
         </>
